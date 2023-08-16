@@ -1,11 +1,10 @@
 import {action, computed, makeAutoObservable} from "mobx"
 import {IProduct} from "../types";
 import {findIndex, forEach, sortBy, uniqBy} from "lodash";
-import {persist} from 'mobx-persist';
 
 export class ProductStore {
     products: IProduct[] = [];
-    @persist selectedProducts: IProduct[] = [];
+    selectedProducts: IProduct[] = [];
     isLoading: boolean = false;
     searchItem: string = '';
 
